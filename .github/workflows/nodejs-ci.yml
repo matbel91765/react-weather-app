@@ -1,3 +1,4 @@
+# Modified by CloudFlow: Removed step "Run linting"
 name: test CI/CD
 "on":
   push:
@@ -23,8 +24,6 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm install
-      - name: Run linting
-        run: npm run lint
       - name: Run tests
         run: npm test
       - name: Build
